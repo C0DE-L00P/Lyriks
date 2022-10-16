@@ -19,7 +19,7 @@ const Searchbar = () => {
         Search all files
       </label>
       <div className="flex flex-row justify-start items-center">
-        <FiSearch aria-hidden="true" className="w-5 h-5 ml-4" />
+        <FiSearch aria-hidden="true" className="w-5 h-5 ml-4" onClick={handleSubmit}/>
         <input
           name="search-field"
           autoComplete="off"

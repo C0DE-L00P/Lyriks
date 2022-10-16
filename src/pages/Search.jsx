@@ -1,13 +1,9 @@
 import { Error, Loader, SongCard } from "../components";
-import { genres } from "../assets/constants";
 import { useGetSongsBySearchQuery } from "../redux/services/shazamCore";
-import { useDispatch, useSelector } from "react-redux";
-import { useState } from "react";
-import { selectGenreListId } from "../redux/features/playerSlice";
 import { useParams } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 const Search = () => {
-  const dispatch = useDispatch();
   const { activeSong, isPlaying } = useSelector((state) => state.player);
   const { searchTerm } = useParams();
   const { data, isFetching, error } = useGetSongsBySearchQuery(searchTerm);
@@ -18,7 +14,7 @@ const Search = () => {
 
   return (
     <div className="flex flex-col">
-      <h2 className="text-white text-3xl font-bold">
+      <h2 className="text-white text-3xl font-bold my-8">
         Showing results for {searchTerm}
       </h2>
       <div className="flex flex-wrap sm:justify-start justify-center gap-8">

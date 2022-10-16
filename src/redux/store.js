@@ -1,7 +1,7 @@
 import { configureStore } from '@reduxjs/toolkit';
 
 import playerReducer from './features/playerSlice';
-import { ShazamCoreApi } from './features/shazamCore';
+import { ShazamCoreApi } from './services/shazamCore';
 
 export const store = configureStore({
   reducer: {

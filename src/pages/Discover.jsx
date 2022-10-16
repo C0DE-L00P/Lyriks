@@ -1,7 +1,6 @@
 import { Error, Loader, SongCard } from "../components";
 import { genres } from "../assets/constants";
-import { useEffect } from "react";
-import { useGetTopChartsQuery } from "../redux/features/shazamCore";
+import { useGetTopChartsQuery } from "../redux/services/shazamCore";
 import { useSelector } from "react-redux";
 
 const Discover = () => {

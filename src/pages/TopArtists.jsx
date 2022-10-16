@@ -7,7 +7,6 @@ const TopArtists = () => {
   const { data, isFetching, error } = useGetTopChartsQuery();
 
   if (isFetching) return <Loader title="Loading artists..." />;
-
   if (error) return <Error />;
 
   return (
